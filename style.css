@@ -68,12 +68,6 @@ font-family: "Tiny5", sans-serif;
     90% { transform: translate(1px, 2px) rotate(0deg); }
     100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
-@media (max-width: 768px){
-    .buttons{
-        width: 200px;
-        height: 200px;
-    }
-}
 .start{
     background: #333233;
     transition: transform 0.4s cubic-bezier(0.1, 0.67, 0.31, 1);
