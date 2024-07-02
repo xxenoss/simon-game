@@ -5,13 +5,18 @@ var started = false;
 var level = 0;
 
 // Start Game.
-$(document).keypress(function(){
+$(document).keypress(gameStart);
+
+$(".start").click(gameStart)
+
+
+function gameStart(){
     if(!started){
-        $(".level-title").text("Level "+ level);
+        $(".level-title").text("You are at Level "+ level);
         nextSequence();
         started = true;
     }
-});
+}
 
 
 $(".buttons").click(function(){
@@ -46,7 +51,7 @@ function checkAnswer(currentLevel){
 function nextSequence(){
     userClickPattern = [];
     level++;
-    $(".level-title").text("Level "+level);
+    $(".level-title").text("You are at Level "+level);
     var randomNumber = Math.floor(Math.random()*4);
     var randomChosenColor = buttonColors[randomNumber];
     gamePattern.push(randomChosenColor);
